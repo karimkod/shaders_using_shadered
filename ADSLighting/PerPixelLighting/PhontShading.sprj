@@ -80,7 +80,7 @@
 				</variable>
 				<variable type="float" name="aCoeff">
 					<row>
-						<value>0.180000007</value>
+						<value>0.5</value>
 					</row>
 				</variable>
 				<variable type="float" name="dCoeff">
@@ -95,17 +95,7 @@
 				</variable>
 				<variable type="float" name="materialShininess">
 					<row>
-						<value>5.69999981</value>
-					</row>
-				</variable>
-				<variable type="float" name="specularCutOff">
-					<row>
-						<value>2.1400001</value>
-					</row>
-				</variable>
-				<variable type="float" name="inferiorEdge">
-					<row>
-						<value>-0.629999995</value>
+						<value>6.19999981</value>
 					</row>
 				</variable>
 			</variables>
@@ -124,12 +114,10 @@
 		<entry type="pinned" name="dCoeff" owner="Simple" />
 		<entry type="pinned" name="sCoeff" owner="Simple" />
 		<entry type="pinned" name="materialShininess" owner="Simple" />
-		<entry type="pinned" name="inferiorEdge" owner="Simple" />
-		<entry type="pinned" name="specularCutOff" owner="Simple" />
 		<entry type="camera" fp="false">
-			<distance>21</distance>
-			<pitch>18</pitch>
-			<yaw>181</yaw>
+			<distance>26</distance>
+			<pitch>46</pitch>
+			<yaw>196</yaw>
 			<roll>360</roll>
 		</entry>
 		<entry type="clearcolor" r="0" g="0" b="0" a="0" />
