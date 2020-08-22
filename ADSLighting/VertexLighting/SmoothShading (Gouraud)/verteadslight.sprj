@@ -16,7 +16,18 @@
 					<width>1</width>
 					<height>1</height>
 					<depth>1</depth>
+					<y>-2.45184851</y>
 					<z>-2</z>
+					<topology>TriangleList</topology>
+				</item>
+				<item name="Cube" type="geometry">
+					<type>Cube</type>
+					<width>1</width>
+					<height>1</height>
+					<depth>1</depth>
+					<x>-2.27543449</x>
+					<y>-0.654984474</y>
+					<z>-2.19168377</z>
 					<topology>TriangleList</topology>
 				</item>
 			</items>
@@ -75,23 +86,23 @@
 				<variable type="float4x4" name="matGeo" system="GeometryTransform" />
 				<variable type="float" name="materialShininess">
 					<row>
-						<value>0.200000003</value>
+						<value>-0.00999999978</value>
 					</row>
 				</variable>
 				<variable type="float4" name="eyePosition" system="CameraPosition" />
 				<variable type="float" name="aCoeff">
 					<row>
-						<value>0</value>
+						<value>0.300000012</value>
 					</row>
 				</variable>
 				<variable type="float" name="dCoeff">
 					<row>
-						<value>0</value>
+						<value>0.5</value>
 					</row>
 				</variable>
 				<variable type="float" name="sCoeff">
 					<row>
-						<value>0</value>
+						<value>0.200000003</value>
 					</row>
 				</variable>
 			</variables>
@@ -101,7 +112,7 @@
 	<objects />
 	<cameras />
 	<settings>
-		<entry type="property" name="Simple" item="pipe" />
+		<entry type="property" name="Sphere" item="pipe" />
 		<entry type="file" name="Simple" shader="vs" />
 		<entry type="file" name="Simple" shader="ps" />
 		<entry type="pinned" name="lightPosition" owner="Simple" />
@@ -116,9 +127,9 @@
 		<entry type="pinned" name="dCoeff" owner="Simple" />
 		<entry type="pinned" name="sCoeff" owner="Simple" />
 		<entry type="camera" fp="false">
-			<distance>14</distance>
-			<pitch>41</pitch>
-			<yaw>93</yaw>
+			<distance>6</distance>
+			<pitch>37</pitch>
+			<yaw>165</yaw>
 			<roll>360</roll>
 		</entry>
 		<entry type="clearcolor" r="0" g="0" b="0" a="0" />
