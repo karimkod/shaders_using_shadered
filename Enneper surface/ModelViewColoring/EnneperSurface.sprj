@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<project version="2">
+	<pipeline>
+		<pass name="Simple" type="shader" active="true">
+			<shader type="vs" path="shaders\EnneperSurface_SimpleVS.glsl" entry="main" />
+			<shader type="ps" path="shaders\EnneperSurface_SimplePS.glsl" entry="main" />
+			<inputlayout>
+				<item value="Position" semantic="POSITION" />
+				<item value="Normal" semantic="NORMAL" />
+				<item value="Texcoord" semantic="TEXCOORD0" />
+			</inputlayout>
+			<rendertexture />
+			<items>
+				<item name="Plane" type="geometry">
+					<type>Plane</type>
+					<width>1</width>
+					<height>1</height>
+					<depth>1</depth>
+					<topology>TriangleList</topology>
+				</item>
+			</items>
+			<itemvalues />
+			<variables>
+				<variable type="float4x4" name="matVP" system="ViewProjection" />
+				<variable type="float4x4" name="matGeo" system="GeometryTransform" />
+				<variable type="float4x4" name="matV" system="View" />
+				<variable type="float4x4" name="matP" system="Projection" />
+				<variable type="float3" name="lightPosition">
+					<row>
+						<value>0</value>
+						<value>0</value>
+						<value>0</value>
+					</row>
+				</variable>
+				<variable type="float4" name="lightColor">
+					<row>
+						<value>1</value>
+						<value>0.999989986</value>
+						<value>0.999989986</value>
+						<value>0</value>
+					</row>
+				</variable>
+				<variable type="float4" name="ambientColor">
+					<row>
+						<value>1</value>
+						<value>0.999989986</value>
+						<value>0.999989986</value>
+						<value>0</value>
+					</row>
+				</variable>
+				<variable type="float" name="aCoeff">
+					<row>
+						<value>1</value>
+					</row>
+				</variable>
+				<variable type="float" name="dCoeff">
+					<row>
+						<value>0</value>
+					</row>
+				</variable>
+				<variable type="float" name="materialShininess">
+					<row>
+						<value>6.19999981</value>
+					</row>
+				</variable>
+				<variable type="float" name="sCoeff">
+					<row>
+						<value>0</value>
+					</row>
+				</variable>
+				<variable type="float4" name="colorMaterial">
+					<row>
+						<value>1</value>
+						<value>0.999989986</value>
+						<value>0.999989986</value>
+						<value>0</value>
+					</row>
+				</variable>
+			</variables>
+			<macros />
+		</pass>
+	</pipeline>
+	<objects />
+	<cameras />
+	<settings>
+		<entry type="file" name="Simple" shader="vs" />
+		<entry type="file" name="Simple" shader="ps" />
+		<entry type="pinned" name="sCoeff" owner="Simple" />
+		<entry type="pinned" name="materialShininess" owner="Simple" />
+		<entry type="pinned" name="dCoeff" owner="Simple" />
+		<entry type="pinned" name="aCoeff" owner="Simple" />
+		<entry type="pinned" name="ambientColor" owner="Simple" />
+		<entry type="pinned" name="lightColor" owner="Simple" />
+		<entry type="pinned" name="colorMaterial" owner="Simple" />
+		<entry type="camera" fp="false">
+			<distance>16</distance>
+			<pitch>-39</pitch>
+			<yaw>89</yaw>
+			<roll>360</roll>
+		</entry>
+		<entry type="clearcolor" r="0" g="0" b="0" a="0" />
+		<entry type="usealpha" val="false" />
+	</settings>
+	<plugindata />
+</project>
