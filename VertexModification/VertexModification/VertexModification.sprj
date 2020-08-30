@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<project version="2">
+	<pipeline>
+		<pass name="Simple" type="shader" active="true">
+			<shader type="vs" path="shaders\VertexModification_SimpleVS.glsl" entry="main" />
+			<shader type="ps" path="shaders\VertexModification_SimplePS.glsl" entry="main" />
+			<inputlayout>
+				<item value="Position" semantic="POSITION" />
+				<item value="Normal" semantic="NORMAL" />
+				<item value="Texcoord" semantic="TEXCOORD0" />
+			</inputlayout>
+			<rendertexture />
+			<items>
+				<item name="Box" type="geometry">
+					<type>Cube</type>
+					<width>1</width>
+					<height>1</height>
+					<depth>1</depth>
+					<yaw>0.763930619</yaw>
+					<x>-0.519507647</x>
+					<y>-1.23318291</y>
+					<z>0.170398235</z>
+					<topology>TriangleList</topology>
+				</item>
+				<item name="Sphere" type="geometry">
+					<type>Sphere</type>
+					<width>1</width>
+					<height>1</height>
+					<depth>1</depth>
+					<x>-3.67338562</x>
+					<y>-3.61894035</y>
+					<z>-0.887649536</z>
+					<topology>TriangleList</topology>
+				</item>
+				<item name="Sphere2" type="geometry">
+					<type>Sphere</type>
+					<width>1</width>
+					<height>1</height>
+					<depth>1</depth>
+					<x>2.76441765</x>
+					<y>1.31996155</y>
+					<z>-3.62082863</z>
+					<topology>TriangleList</topology>
+				</item>
+				<item name="Teapot" type="model">
+					<filepath>..\..\teapot.fbx</filepath>
+					<grouponly>false</grouponly>
+					<x>-4.14096594</x>
+					<y>-5.54091358</y>
+					<z>2.63002348</z>
+				</item>
+			</items>
+			<itemvalues>
+				<value variable="lowerEdge" for="Box">
+					<row>
+						<value>0.0500000007</value>
+					</row>
+				</value>
+				<value variable="higherEdge" for="Box">
+					<row>
+						<value>0.610000014</value>
+					</row>
+				</value>
+			</itemvalues>
+			<variables>
+				<variable type="float4x4" name="matVP" system="ViewProjection" />
+				<variable type="float4x4" name="matGeo" system="GeometryTransform" />
+				<variable type="float4x4" name="matV" system="View" />
+				<variable type="float4x4" name="matP" system="Projection" />
+				<variable type="float3" name="lightPosition">
+					<row>
+						<value>0</value>
+						<value>0</value>
+						<value>0</value>
+					</row>
+				</variable>
+				<variable type="float4" name="lightColor">
+					<row>
+						<value>1</value>
+						<value>0.999989986</value>
+						<value>0.999989986</value>
+						<value>0</value>
+					</row>
+				</variable>
+				<variable type="float4" name="ambientColor">
+					<row>
+						<value>1</value>
+						<value>0.999989986</value>
+						<value>0.999989986</value>
+						<value>0</value>
+					</row>
+				</variable>
+				<variable type="float" name="aCoeff">
+					<row>
+						<value>0.300000012</value>
+					</row>
+				</variable>
+				<variable type="float" name="dCoeff">
+					<row>
+						<value>0.5</value>
+					</row>
+				</variable>
+				<variable type="float" name="materialShininess">
+					<row>
+						<value>6.19999981</value>
+					</row>
+				</variable>
+				<variable type="float" name="sCoeff">
+					<row>
+						<value>1</value>
+					</row>
+				</variable>
+				<variable type="float4" name="colorMaterial">
+					<row>
+						<value>1</value>
+						<value>0.999989986</value>
+						<value>0.999989986</value>
+						<value>0</value>
+					</row>
+				</variable>
+				<variable type="float" name="angleAboutY">
+					<row>
+						<value>90</value>
+					</row>
+				</variable>
+				<variable type="float" name="lowerEdge">
+					<row>
+						<value>0.379999995</value>
+					</row>
+				</variable>
+				<variable type="float" name="higherEdge">
+					<row>
+						<value>1.30999994</value>
+					</row>
+				</variable>
+				<variable type="float" name="squishAmount">
+					<row>
+						<value>17.2900009</value>
+					</row>
+				</variable>
+				<variable type="float" name="shrinkAmount">
+					<row>
+						<value>3.29999995</value>
+					</row>
+				</variable>
+				<variable type="float" name="transformationAmount">
+					<row>
+						<value>1</value>
+					</row>
+				</variable>
+				<variable type="float" name="time" system="Time" />
+			</variables>
+			<macros />
+		</pass>
+	</pipeline>
+	<objects />
+	<cameras />
+	<settings>
+		<entry type="file" name="Simple" shader="vs" />
+		<entry type="file" name="Simple" shader="ps" />
+		<entry type="pinned" name="sCoeff" owner="Simple" />
+		<entry type="pinned" name="materialShininess" owner="Simple" />
+		<entry type="pinned" name="dCoeff" owner="Simple" />
+		<entry type="pinned" name="aCoeff" owner="Simple" />
+		<entry type="pinned" name="ambientColor" owner="Simple" />
+		<entry type="pinned" name="lightColor" owner="Simple" />
+		<entry type="pinned" name="colorMaterial" owner="Simple" />
+		<entry type="pinned" name="angleAboutY" owner="Simple" />
+		<entry type="pinned" name="lowerEdge" owner="Simple" />
+		<entry type="pinned" name="higherEdge" owner="Simple" />
+		<entry type="pinned" name="squishAmount" owner="Simple" />
+		<entry type="pinned" name="shrinkAmount" owner="Simple" />
+		<entry type="pinned" name="transformationAmount" owner="Simple" />
+		<entry type="camera" fp="false">
+			<distance>22</distance>
+			<pitch>4</pitch>
+			<yaw>204</yaw>
+			<roll>360</roll>
+		</entry>
+		<entry type="clearcolor" r="0" g="0" b="0" a="0" />
+		<entry type="usealpha" val="false" />
+	</settings>
+	<plugindata />
+</project>
